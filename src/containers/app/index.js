@@ -27,7 +27,7 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                <HeaderComponent 
+                <HeaderComponent
                     logo={logoUrl}
                     handleButtonClick={this.loggedUser}
                 />

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import App from 'containers/app';
+import Main from 'containers/main';
 import 'assets/styles/index.css';
 
 import store from 'store';
@@ -15,7 +15,7 @@ const root = document.getElementById('root');
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <Main />
     </Provider>,
     root
 );
