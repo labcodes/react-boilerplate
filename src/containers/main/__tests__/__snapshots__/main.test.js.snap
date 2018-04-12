@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main [Snapshot] Renders correctly 1`] = `
+<main>
+  <aside
+    className="nav-list"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </aside>
+  <div
+    className="App"
+  >
+    <header
+      className="App-header"
+    >
+      <img
+        alt="logo"
+        className="App-logo"
+        src="logo.svg"
+      />
+      <h1
+        className="App-title"
+      >
+        Welcome to React
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        change user status
+      </button>
+    </header>
+    <p
+      className="App-intro"
+    >
+      User is unlogged.
+    </p>
+  </div>
+</main>
+`;
