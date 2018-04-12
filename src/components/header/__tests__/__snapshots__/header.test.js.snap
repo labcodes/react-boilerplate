@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header [Snapshot] Renders correctly 1`] = `
+<header
+  className="App-header"
+>
+  <img
+    alt="logo"
+    className="App-logo"
+    src=""
+  />
+  <h1
+    className="App-title"
+  >
+    Welcome to React
+  </h1>
+  <button
+    onClick={[Function]}
+  >
+    change user status
+  </button>
+</header>
+`;
