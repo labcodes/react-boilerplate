@@ -28,5 +28,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "./deploy.sh"
+  },
+  "devDependencies": {
+    "raven-js": "^3.24.2"
   }
 }
