@@ -1,6 +1,6 @@
 # React Boilerplate
 
-A boilerplate to start a new React project with everything, ready to use!
+> A boilerplate to start a new React project with everything, ready to use!
 
 ## Getting Started
 
