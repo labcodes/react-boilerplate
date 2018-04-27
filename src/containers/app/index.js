@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { connect } from 'react-redux';
 
 import { userLogged } from 'actions/dashboard'
@@ -27,18 +27,20 @@ class App extends React.Component {
         const { logged } = this.props;
 
         return (
-            <div className="App">
-                <ErrorBoundary>
-                    <HeaderComponent
-                        logo={logoUrl}
-                        handleButtonClick={this.loggedUser}
-                    />
-                </ErrorBoundary>
+            <StrictMode>
+                <div className="App">
+                    <ErrorBoundary>
+                        <HeaderComponent
+                            logo={logoUrl}
+                            handleButtonClick={this.loggedUser}
+                        />
+                    </ErrorBoundary>
 
-                <p className="App-intro">
-                    { logged ? 'User is logged' : 'User is unlogged.' }
-                </p>
-            </div>
+                    <p className="App-intro">
+                        { logged ? 'User is logged' : 'User is unlogged.' }
+                    </p>
+                </div>
+            </StrictMode>
         );
     }
 }
