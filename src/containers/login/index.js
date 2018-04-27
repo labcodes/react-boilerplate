@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 
 // ====
 
 const LoginContainer = () => {
     return (
-        <h1>It works!</h1>
+        <StrictMode>
+            <h1>It works!</h1>
+        </StrictMode>
     );
 };
 
