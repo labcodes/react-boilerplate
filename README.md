@@ -57,6 +57,8 @@ $ npm run build && npm run deploy
 * [React-router](https://www.npmjs.com/package/react-router-dom) - Declarative routing
 * [Redux-form](https://www.npmjs.com/package/redux-form) - Used to manager the form state in Redux
 * [Redux-logger](https://www.npmjs.com/package/redux-logger) - Logger for Redux applications
+* [Husky](https://github.com/typicode/husky) - Used to git hooks
+* [Sentry](https://github.com/getsentry/raven-js) - Used to track errors
 
 ## Contributors
 

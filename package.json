@@ -30,6 +30,12 @@
     "deploy": "./deploy.sh"
   },
   "devDependencies": {
+    "husky": "^1.0.0-rc.2",
     "raven-js": "^3.24.2"
+  },
+  "husky": {
+      "hooks": {
+          "pre-push": "CI=true npm run test"
+      }
   }
 }
