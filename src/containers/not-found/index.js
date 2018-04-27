@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 
 // ====
 
 const NotFound = () => {
     return(
-        <h1>NotFound</h1>
+        <StrictMode>
+            <h1>NotFound</h1>
+        </StrictMode>
     );
 };
 
