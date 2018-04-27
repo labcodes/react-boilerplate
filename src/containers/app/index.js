@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { userLogged } from 'actions/dashboard'
 
 import HeaderComponent from 'components/header';
+import ErrorBoundary from 'components/error-boundary';
 
 import logoUrl from 'assets/images/logo.svg';
 import './style.css';
@@ -27,10 +28,12 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                <HeaderComponent
-                    logo={logoUrl}
-                    handleButtonClick={this.loggedUser}
-                />
+                <ErrorBoundary>
+                    <HeaderComponent
+                        logo={logoUrl}
+                        handleButtonClick={this.loggedUser}
+                    />
+                </ErrorBoundary>
 
                 <p className="App-intro">
                     { logged ? 'User is logged' : 'User is unlogged.' }
