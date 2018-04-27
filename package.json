@@ -26,11 +26,17 @@
     "start": "npm-run-all -p watch:css start:js",
     "build": "npm-run-all build:css build:js",
     "test": "react-scripts test --env=jsdom",
+    "test:once": "CI=true npm run test",
     "eject": "react-scripts eject",
     "deploy": "./deploy.sh"
   },
   "devDependencies": {
     "husky": "^1.0.0-rc.2",
     "raven-js": "^3.24.2"
+  },
+  "husky": {
+      "hooks": {
+          "pre-push": "npm run test:once"
+      }
   }
 }
