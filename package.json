@@ -26,7 +26,6 @@
     "start": "npm-run-all -p watch:css start:js",
     "build": "npm-run-all build:css build:js",
     "test": "react-scripts test --env=jsdom",
-    "test:once": "CI=true npm run test",
     "eject": "react-scripts eject",
     "deploy": "./deploy.sh"
   },
@@ -36,7 +35,7 @@
   },
   "husky": {
       "hooks": {
-          "pre-push": "npm run test:once"
+          "pre-push": "CI=true npm run test"
       }
   }
 }
