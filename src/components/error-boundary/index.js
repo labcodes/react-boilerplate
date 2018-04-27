@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Exceptions from 'helpers/exceptions';
+
 // ====
 
 class ErrorBoundary extends React.Component {
@@ -11,6 +13,12 @@ class ErrorBoundary extends React.Component {
             error: null,
             errorInfo: null
         };
+
+        this.exception = new Exceptions('https://684fd202de044572adc1ba2b7bc14a41@sentry.io/1197780');
+    }
+
+    componentDidMount() {
+        this.exception.install();
     }
 
     componentDidCatch(error, info) {
@@ -19,6 +27,9 @@ class ErrorBoundary extends React.Component {
             error: error,
             errorInfo: info.componentStack
         });
+
+        this.exception.report(info.componentStack);
+        this.exception.reportMessage(error);
     }
 
     render() {
