@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar [Snapshot] Renders correctly 1`] = `
+<aside
+  className="nav-list"
+>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Home
+  </a>
+  <a
+    href="/login"
+    onClick={[Function]}
+  >
+    Login
+  </a>
+</aside>
+`;
