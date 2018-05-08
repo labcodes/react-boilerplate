@@ -28,16 +28,14 @@ class Private extends React.Component {
 
 // ====
 
-const Private = ({ component: Component, ...rest }) => {
-    return (
-        <main>
-            <Route {...rest} render={(props) => (
-                <Component {...props} />
-            )} />
-        </main>
-    );
+const mapStateToProps = (state) => {
+    return {
+        logged: state.system.userIsLogged,
+    }
 };
 
 // ====
 
-export default Private;
+export default connect(
+    mapStateToProps
+)(Private);
