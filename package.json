@@ -26,7 +26,7 @@
     "watch:css": "npm run build:css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start": "npm-run-all -p watch:css start:js",
     "build": "npm-run-all build:css build:js",
-    "test": "react-scripts test --env=jsdom",
+    "test": "npm run build:css && react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "./deploy.sh"
   },
