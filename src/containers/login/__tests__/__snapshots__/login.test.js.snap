@@ -2,6 +2,6 @@
 
 exports[`Login [Snapshot] Renders correctly 1`] = `
 <h1>
-  It works!
+  Login!
 </h1>
 `;

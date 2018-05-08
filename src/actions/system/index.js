@@ -1,10 +1,5 @@
-import { USER_LOGGED } from 'actions/dashboard/types';
-
-// ====
-
-const initialState = {
-    userIsLogged: false
-};
+import { USER_LOGGED } from 'actions/system/types';
+import initialState from 'actions/system/state';
 
 // ====
 
@@ -24,7 +19,7 @@ export default (state = initialState, action) => {
                 ...state,
                 userIsLogged: payload
             }
-    
+
         default:
             return state;
     }

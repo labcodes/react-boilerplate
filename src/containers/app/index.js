@@ -1,7 +1,7 @@
 import React, { StrictMode } from 'react';
 import { connect } from 'react-redux';
 
-import { userLogged } from 'actions/dashboard'
+import { userLogged } from 'actions/system';
 
 import HeaderComponent from 'components/header';
 import ErrorBoundary from 'components/error-boundary';
@@ -61,7 +61,7 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        logged: state.dashboard.userIsLogged,
+        logged: state.system.userIsLogged,
     }
 };
 

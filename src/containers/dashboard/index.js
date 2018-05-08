@@ -2,14 +2,14 @@ import React, { StrictMode } from 'react';
 
 // ====
 
-const LoginContainer = () => {
+const DashboardContainer = () => {
     return (
         <StrictMode>
-            <h1>Login!</h1>
+            <h1>Dashboard works!</h1>
         </StrictMode>
     );
 };
 
 // ====
 
-export default LoginContainer;
+export default DashboardContainer;
