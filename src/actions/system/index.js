@@ -1,10 +1,5 @@
 import { USER_LOGGED } from 'actions/system/types';
-
-// ====
-
-const initialState = {
-    userIsLogged: false
-};
+import initialState from 'actions/system/state';
 
 // ====
 
