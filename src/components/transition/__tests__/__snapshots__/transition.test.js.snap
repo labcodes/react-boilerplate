@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transition [Snapshot] Renders correctly 1`] = `
+<section
+  className="page-wrapper "
+  style={
+    Object {
+      "opacity": 0,
+      "transition": "opacity 150ms ease-in-out",
+    }
+  }
+/>
+`;
