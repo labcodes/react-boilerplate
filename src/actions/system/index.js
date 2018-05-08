@@ -1,4 +1,4 @@
-import { USER_LOGGED } from 'actions/dashboard/types';
+import { USER_LOGGED } from 'actions/system/types';
 
 // ====
 
@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
                 ...state,
                 userIsLogged: payload
             }
-    
+
         default:
             return state;
     }

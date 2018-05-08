@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form';
 
-import dashboard from './dashboard';
+import system from './system';
 
 // ====
 
 export default combineReducers({
-    dashboard,
+    system,
     form
 });
