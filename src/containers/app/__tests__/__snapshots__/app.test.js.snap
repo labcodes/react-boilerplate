@@ -1,32 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App [Snapshot] Renders correctly 1`] = `
-<div
-  className="App"
+<section
+  className="page-wrapper "
+  style={
+    Object {
+      "opacity": 0,
+      "transition": "opacity 150ms ease-in-out",
+    }
+  }
 >
-  <header
-    className="App-header"
+  <div
+    className="App"
   >
-    <img
-      alt="logo"
-      className="App-logo"
-      src="logo.svg"
-    />
-    <h1
-      className="App-title"
+    <header
+      className="App-header"
     >
-      Welcome to React
-    </h1>
-    <button
-      onClick={[Function]}
+      <img
+        alt="logo"
+        className="App-logo"
+        src="logo.svg"
+      />
+      <h1
+        className="App-title"
+      >
+        Welcome to React
+      </h1>
+      <button
+        onClick={[Function]}
+      >
+        change user status
+      </button>
+    </header>
+    <p
+      className="App-intro"
     >
-      change user status
-    </button>
-  </header>
-  <p
-    className="App-intro"
-  >
-    User is unlogged.
-  </p>
-</div>
+      User is unlogged.
+    </p>
+  </div>
+</section>
 `;
