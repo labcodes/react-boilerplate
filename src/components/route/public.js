@@ -1,15 +1,14 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
+import Navbar from 'components/navbar';
 
 // ====
 
 const PublicRoute = ({ component: Component, ...rest }) => {
     return (
         <main>
-            <aside className="nav-list">
-                <Link to='/'>Home</Link>
-                <Link to='/login'>Login</Link>
-            </aside>
+            <Navbar />
 
             <Route {...rest} render={(props) => (
                 <Component {...props} />
