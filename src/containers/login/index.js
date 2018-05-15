@@ -13,6 +13,18 @@ class LoginContainer extends React.Component {
         addFormData(values);
     }
 
+    addFakeData() {
+        const { addFormData } = this.props;
+
+        const fakeData = {
+            username: 'fake user',
+            email: 'fake-user@email.com',
+            uf: 'PE'
+        };
+
+        addFormData(fakeData);
+    }
+
     render(){
         return (
             <StrictMode>
@@ -20,6 +32,14 @@ class LoginContainer extends React.Component {
                     <h1>Login!</h1>
 
                     <FormComponent submitForm={this.handleSubmitForm.bind(this)} />
+                </section>
+
+                <section>
+                    <h1>Fake data!</h1>
+
+                    <button onClick={() => this.addFakeData()}>
+                        load
+                    </button>
                 </section>
             </StrictMode>
         );
