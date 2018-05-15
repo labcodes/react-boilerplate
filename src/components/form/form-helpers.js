@@ -1,4 +1,4 @@
-import store from 'store';
+// import store from 'store';
 // import { addFormContent } from 'actions/system';
 
 // ====
@@ -19,6 +19,7 @@ const validate = (values) => {
 
 const submit = (values) => {
     console.warn(values);
+    return values;
     // store.dispatch(
     //     addFormContent(values)
     // )
@@ -32,7 +33,3 @@ export {
     validate,
     submit,
 };
-
-// ====
-
-export default submitForm;
