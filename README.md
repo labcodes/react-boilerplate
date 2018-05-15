@@ -1,5 +1,7 @@
 # React Boilerplate
 
+[![CircleCI](https://circleci.com/gh/labcodes/react-boilerplate/tree/master.svg?style=svg&circle-token=f728c98c45f5e1fd696f851b42854a9e0fec495a)](https://circleci.com/gh/labcodes/react-boilerplate/tree/master)
+
 > A boilerplate to start a new React project with everything, ready to use!
 
 ## Getting Started
