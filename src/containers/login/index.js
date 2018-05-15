@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { addFormData } from 'actions/login';
 
 import FormComponent from 'components/form';
+import Formbuttons from 'components/form/form-buttons';
 
 // ====
 
@@ -40,6 +41,11 @@ class LoginContainer extends React.Component {
                     <button onClick={() => this.addFakeData()}>
                         load
                     </button>
+                </section>
+
+                <section>
+                    <h1>Remote submit!</h1>
+                    <Formbuttons />
                 </section>
             </StrictMode>
         );
