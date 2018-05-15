@@ -11,3 +11,15 @@ exports[`Transition [Snapshot] Renders correctly 1`] = `
   }
 />
 `;
+
+exports[`Transition [Snapshot] Renders correctly 2`] = `
+<section
+  className="page-wrapper ds"
+  style={
+    Object {
+      "opacity": 0,
+      "transition": "opacity 150ms ease-in-out",
+    }
+  }
+/>
+`;
