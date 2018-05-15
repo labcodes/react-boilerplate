@@ -1,13 +1,16 @@
 import React, { StrictMode } from 'react';
+import { connect } from 'react-redux';
+
+import { addFormData } from 'actions/login';
+
 import FormComponent from 'components/form';
 
 // ====
 
 class LoginContainer extends React.Component {
     handleSubmitForm(values) {
-        // const { addFormContent } = this.props;
-        // addFormContent(values);
-        console.warn('Submiting form using [LoginContainer]', values);
+        const { addFormData } = this.props;
+        addFormData(values);
     }
 
     render(){
@@ -23,6 +26,18 @@ class LoginContainer extends React.Component {
     }
 };
 
+// ====
+
+const mapStateToProps = null;
+
+const mapDispatchToProps = {
+    addFormData
+};
+
+LoginContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(LoginContainer);
 
 // ====
 
