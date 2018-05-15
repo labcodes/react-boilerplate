@@ -1,5 +1,5 @@
-// import store from 'store';
-// import { addFormContent } from 'actions/system';
+import store from 'store';
+import { addFormData } from 'actions/login';
 
 // ====
 
@@ -18,13 +18,10 @@ const validate = (values) => {
 };
 
 const submit = (values) => {
-    console.warn(values);
-    return values;
-    // store.dispatch(
-    //     addFormContent(values)
-    // )
+    store.dispatch(
+        addFormData(values)
+    )
 };
-
 
 // ====
 
