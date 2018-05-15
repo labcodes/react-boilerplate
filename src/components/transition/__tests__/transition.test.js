@@ -15,5 +15,10 @@ describe('Transition [Snapshot]', () => {
         const tree = renderer.create(<Transition />).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    it('Renders correctly', () => {
+        const tree = renderer.create(<Transition customClass="ds" />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 });
 

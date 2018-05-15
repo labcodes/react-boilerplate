@@ -1,7 +1,150 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login [Snapshot] Renders correctly 1`] = `
-<h1>
-  Login!
-</h1>
+Array [
+  <section>
+    <h1>
+        Login!
+    </h1>
+    <form
+        onSubmit={[Function]}
+    >
+        <div
+            className="field"
+        >
+            <label
+                className="label"
+                htmlFor="Username"
+            >
+                Username
+            </label>
+            <div
+                className="control"
+            >
+                <input
+                    autoComplete="off"
+                    className="input"
+                    name="username"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onDragStart={[Function]}
+                    onDrop={[Function]}
+                    onFocus={[Function]}
+                    placeholder="your username"
+                    type="text"
+                    value=""
+                />
+            </div>
+        </div>
+        <div
+            className="field"
+        >
+            <label
+                className="label"
+                htmlFor="E-mail"
+            >
+                E-mail
+            </label>
+            <div
+                className="control"
+            >
+                <input
+                    autoComplete="off"
+                    className="input"
+                    name="e-mail"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onDragStart={[Function]}
+                    onDrop={[Function]}
+                    onFocus={[Function]}
+                    placeholder="your email"
+                    type="email"
+                    value=""
+                />
+            </div>
+        </div>
+        <div
+            className="field"
+        >
+            <label
+                className="label"
+                htmlFor="UF"
+            >
+                UF
+            </label>
+            <div
+                className="control"
+            >
+                <input
+                    autoComplete="off"
+                    className="input"
+                    name="uf"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onDragStart={[Function]}
+                    onDrop={[Function]}
+                    onFocus={[Function]}
+                    placeholder="your uf code"
+                    type="text"
+                    value=""
+                />
+            </div>
+        </div>
+        <div
+            className="field is-grouped"
+        >
+            <div
+                className="control"
+            >
+                <button
+                    className="button is-text"
+                    disabled={true}
+                    onClick={[Function]}
+                    type="button"
+                >
+                    Cancel
+                </button>
+            </div>
+            <div
+                className="control"
+            >
+                <button
+                    className="button is-link"
+                    disabled={true}
+                    type="submit"
+                >
+                    Submit
+                </button>
+            </div>
+        </div>
+    </form>
+</section>,
+  <section>
+    <h1>
+        Fake data!
+    </h1>
+    <button
+        onClick={[Function]}
+    >
+        load
+    </button>
+</section>,
+  <section>
+    <h1>
+        Remote submit!
+    </h1>
+    <div>
+        <button
+            onClick={[Function]}
+        >
+            submit
+        </button>
+        <button
+            onClick={[Function]}
+        >
+            reset
+        </button>
+    </div>
+</section>,
+]
 `;
