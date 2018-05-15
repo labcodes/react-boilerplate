@@ -6,15 +6,16 @@ import { reduxForm, Field } from 'redux-form';
 import { validate as validateForm, normalize as normalizeForm, submit as submitForm } from './form-helpers';
 import renderField from './render-field';
 
+import { addFormData } from 'actions/login';
+
 // ====
 
 class FormComponent extends React.Component {
     resetForm() {
-        // removeFormContent
-        const { reset } = this.props;
+        const { reset, addFormData } = this.props;
 
         reset('login');
-        // removeFormContent({});
+        addFormData({});
     }
 
     componentDidMount() {
@@ -94,18 +95,18 @@ FormComponent = reduxForm({
 // ====
 
 const mapStateToProps = (state) => {
-    return state;
-    // return {
-    //     initialValues: state.system.formContent
-    // };
+    return {
+        initialValues: state.login.formData
+    };
 };
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+    addFormData
+};
 
 FormComponent = connect(
-    // mapStateToProps,
-    // mapDispatchToProps
-    null, null
+    mapStateToProps,
+    mapDispatchToProps
 )(FormComponent);
 
 // ====
