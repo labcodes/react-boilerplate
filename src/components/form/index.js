@@ -18,10 +18,6 @@ class FormComponent extends React.Component {
         addFormData({});
     }
 
-    componentDidMount() {
-        console.warn('[FormComponent] componentDidMount');
-    }
-
     render() {
         const { handleSubmit, pristine, submitting, submitForm } = this.props;
 
