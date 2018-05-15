@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 
@@ -21,10 +22,10 @@ class FormComponent extends React.Component {
     }
 
     render() {
-        const { handleSubmit, pristine, submitting } = this.props;
+        const { handleSubmit, pristine, submitting, submitForm } = this.props;
 
         return(
-            <form onSubmit={handleSubmit()}>
+            <form onSubmit={handleSubmit(submitForm)}>
                 <Field
                     name="username"
                     type="text"
@@ -45,7 +46,7 @@ class FormComponent extends React.Component {
                     name="uf"
                     type="text"
                     component={renderField}
-                    normalize={normalizeUF}
+                    normalize={normalizeForm}
                     label="UF"
                     placeholder="your uf code"
                 />
@@ -77,6 +78,12 @@ class FormComponent extends React.Component {
 
 // ====
 
+FormComponent.propTypes = {
+    submitForm: PropTypes.func
+};
+
+// ====
+
 FormComponent = reduxForm({
     form: 'login',
     enableReinitialize: true,
@@ -96,8 +103,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {};
 
 FormComponent = connect(
-    mapStateToProps,
-    mapDispatchToProps
+    // mapStateToProps,
+    // mapDispatchToProps
+    null, null
 )(FormComponent);
 
 // ====
