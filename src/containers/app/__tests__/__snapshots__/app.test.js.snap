@@ -11,18 +11,18 @@ exports[`App [Snapshot] Renders correctly 1`] = `
   }
 >
   <div
-    className="App"
+    className="sc-bxivhb dhUpOj"
   >
     <header
-      className="App-header"
+      className="sc-bdVaJa eoCrfV"
     >
       <img
         alt="logo"
-        className="App-logo"
+        className="sc-htpNat iFrFVN"
         src="logo.svg"
       />
       <h1
-        className="App-title"
+        className="sc-bwzfXH dullrb"
       >
         Welcome to React
       </h1>
@@ -33,7 +33,7 @@ exports[`App [Snapshot] Renders correctly 1`] = `
       </button>
     </header>
     <p
-      className="App-intro"
+      className="sc-ifAKCX cRvngq"
     >
       User is unlogged.
     </p>

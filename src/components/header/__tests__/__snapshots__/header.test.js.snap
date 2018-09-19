@@ -2,15 +2,15 @@
 
 exports[`Header [Snapshot] Renders correctly 1`] = `
 <header
-  className="App-header"
+  className="sc-bdVaJa eoCrfV"
 >
   <img
     alt="logo"
-    className="App-logo"
+    className="sc-htpNat iFrFVN"
     src=""
   />
   <h1
-    className="App-title"
+    className="sc-bwzfXH dullrb"
   >
     Welcome to React
   </h1>
