@@ -28,9 +28,10 @@
     "deploy": "npm run build && ./deploy.sh"
   },
   "devDependencies": {
+    "enzyme-adapter-react-16": "^1.5.0",
     "husky": "^1.0.0-rc.2",
-    "raven-js": "^3.24.2",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "raven-js": "^3.24.2"
   },
   "husky": {
     "hooks": {
