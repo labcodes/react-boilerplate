@@ -1,13 +1,12 @@
 {
   "name": "react-boilerplate",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "enzyme": "^3.3.0",
     "jest-enzyme": "^6.0.0",
-    "node-sass-chokidar": "^1.2.2",
-    "npm-run-all": "^4.1.2",
-    "prop-types": "^15.6.1",
+    "lodash": "^4.17.11",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-redux": "^5.0.7",
@@ -15,24 +14,23 @@
     "react-scripts": "1.1.4",
     "react-test-renderer": "^16.3.1",
     "react-transition-group": "^2.3.1",
+    "recompose": "^0.30.0",
     "redux": "^3.7.2",
     "redux-form": "^7.3.0",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "styled-components": "^3.4.9"
   },
   "scripts": {
-    "start:js": "react-scripts start",
-    "build:js": "react-scripts build",
-    "build:css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch:css": "npm run build:css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-    "start": "npm-run-all -p watch:css start:js",
-    "build": "npm-run-all build:css build:js",
-    "test": "npm run build:css && react-scripts test --env=jsdom",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "./deploy.sh"
+    "deploy": "npm run build && ./deploy.sh"
   },
   "devDependencies": {
     "husky": "^1.0.0-rc.2",
-    "raven-js": "^3.24.2"
+    "raven-js": "^3.24.2",
+    "prop-types": "^15.6.2"
   },
   "husky": {
     "hooks": {
