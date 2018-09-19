@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard [Snapshot] Renders correctly 1`] = `
-<h1>
+<h1
+  className="sc-bdVaJa irjdWV"
+>
   Dashboard works!
 </h1>
 `;

@@ -3,7 +3,7 @@
 exports[`Main [Snapshot] Renders correctly 1`] = `
 <main>
   <aside
-    className="nav-list"
+    className="sc-bdVaJa dwtwig"
   >
     <a
       href="/"
@@ -28,18 +28,18 @@ exports[`Main [Snapshot] Renders correctly 1`] = `
     }
   >
     <div
-      className="App"
+      className="sc-ifAKCX inzSPu"
     >
       <header
-        className="App-header"
+        className="sc-bwzfXH hKXFQW"
       >
         <img
           alt="logo"
-          className="App-logo"
+          className="sc-bxivhb LmQMX"
           src="logo.svg"
         />
         <h1
-          className="App-title"
+          className="sc-htpNat jBZobA"
         >
           Welcome to React
         </h1>
@@ -50,7 +50,7 @@ exports[`Main [Snapshot] Renders correctly 1`] = `
         </button>
       </header>
       <p
-        className="App-intro"
+        className="sc-EHOje buAfjw"
       >
         User is unlogged.
       </p>

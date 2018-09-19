@@ -47,18 +47,19 @@ $ npm run test
 To run the deploy:
 
 ```sh
-$ npm run build && npm run deploy
+$ npm run deploy
 ```
 
 ## Built With
 
 * [Create React APP](https://github.com/facebook/create-react-app) - Used as a main tool
-* [Node SASS](https://github.com/sass/node-sass) - Node.js bindings to libsass
-* [Prop-types](https://www.npmjs.com/package/prop-types) - Type checking for React props
+* [Styled Components](https://www.styled-components.com/) - CSS in JS
+* [Recompose](https://github.com/acdlite/recompose) - Lodash for React
 * [Redux](https://www.npmjs.com/package/redux) - Predictable state container
-* [React-router](https://www.npmjs.com/package/react-router-dom) - Declarative routing
-* [Redux-form](https://www.npmjs.com/package/redux-form) - Used to manager the form state in Redux
-* [Redux-logger](https://www.npmjs.com/package/redux-logger) - Logger for Redux applications
+* [Prop Types](https://www.npmjs.com/package/prop-types) - Type checking for React props
+* [React Router](https://www.npmjs.com/package/react-router-dom) - Declarative routing
+* [Redux Form](https://www.npmjs.com/package/redux-form) - Used to manager the form state in Redux
+* [Redux Logger](https://www.npmjs.com/package/redux-logger) - Logger for Redux applications
 * [Husky](https://github.com/typicode/husky) - Used to git hooks
 * [Sentry](https://github.com/getsentry/raven-js) - Used to track errors
 

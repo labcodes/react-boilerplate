@@ -2,7 +2,7 @@
 
 exports[`Navbar [Snapshot] Renders correctly 1`] = `
 <aside
-  className="nav-list"
+  className="sc-bdVaJa dwtwig"
 >
   <a
     href="/"
