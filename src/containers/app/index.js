@@ -1,5 +1,6 @@
 import React, { StrictMode } from 'react';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 
 import { userLogged } from 'actions/system';
 
@@ -8,9 +9,14 @@ import ErrorBoundary from 'components/error-boundary';
 import TransitionComponent from 'components/transition';
 
 import logoUrl from 'assets/images/logo.svg';
-import './style.css';
 
-// ====
+const Wrapper = styled.div`
+    text-align: center;
+`;
+
+const Paragraph = styled.p`
+    font-size: large;
+`;
 
 class App extends React.Component {
     constructor(props) {
@@ -39,7 +45,7 @@ class App extends React.Component {
         return (
             <StrictMode>
                 <TransitionComponent transitionIn={transitionIn}>
-                    <div className="App">
+                    <Wrapper>
                         <ErrorBoundary>
                             <HeaderComponent
                                 logo={logoUrl}
@@ -47,17 +53,15 @@ class App extends React.Component {
                             />
                         </ErrorBoundary>
 
-                        <p className="App-intro">
+                        <Paragraph>
                             { logged ? 'User is logged' : 'User is unlogged.' }
-                        </p>
-                    </div>
+                        </Paragraph>
+                    </Wrapper>
                 </TransitionComponent>
             </StrictMode>
         );
     }
-}
-
-// ====
+};
 
 const mapStateToProps = (state) => {
     return {
@@ -68,8 +72,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
     userLogged
 };
-
-// ====
 
 export default connect(
     mapStateToProps,
