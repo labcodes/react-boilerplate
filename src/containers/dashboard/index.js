@@ -1,15 +1,16 @@
 import React, { StrictMode } from 'react';
+import styled from 'styled-components';
 
-// ====
+const Title = styled.h1`
+    text-transform: uppercase;
+`;
 
 const DashboardContainer = () => {
     return (
         <StrictMode>
-            <h1>Dashboard works!</h1>
+            <Title>Dashboard works!</Title>
         </StrictMode>
     );
 };
-
-// ====
 
 export default DashboardContainer;
