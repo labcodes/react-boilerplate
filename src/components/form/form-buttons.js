@@ -1,54 +1,38 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { submit as submitForm, reset as resetForm } from 'redux-form';
+import { compose, withHandlers } from 'recompose';
+
 import { addFormData } from 'actions/login';
 
-// ====
-
-class FormButtons extends React.Component {
-    remoteSubmit() {
-        const { submitForm } = this.props;
-
-        submitForm('login');
-    }
-
-    remoteReset() {
-        const { resetForm, addFormData } = this.props;
-
-        resetForm('login');
-        addFormData({});
-    }
-
-    render() {
-        return(
-            <div>
-                <button onClick={() => this.remoteSubmit()}>
-                    submit
-                </button>
-
-                <button onClick={() => this.remoteReset()}>
-                    reset
-                </button>
-            </div>
-        )
-    }
+const FormButtons = ({ remoteSubmit, remoteReset }) => {
+  return (
+    <div>
+      <button onClick={remoteSubmit}>submit</button>
+      <button onClick={remoteReset}>reset</button>
+    </div>
+  );
 };
-
-// ====
 
 const mapStateToProps = null;
 
 const mapDispatchToProps = {
-    submitForm,
-    resetForm,
-    addFormData
+  submitForm,
+  resetForm,
+  addFormData
 };
 
-FormButtons = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(FormButtons);
+const enhance = compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  withHandlers({
+    remoteSubmit: ({ submitForm }) => () => {
+      submitForm('login');
+    },
+    remoteReset: ({ resetForm, addFormData }) => () => {
+      resetForm('login');
+      addFormData({});
+    }
+  })
+);
 
-// ====
-
-export default FormButtons;
+export default enhance(FormButtons);
