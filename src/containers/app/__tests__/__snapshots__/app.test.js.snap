@@ -11,7 +11,7 @@ exports[`App [Snapshot] Renders correctly 1`] = `
   }
 >
   <div
-    className="sc-bxivhb dhUpOj"
+    className="sc-bxivhb EYjjH"
   >
     <header
       className="sc-bdVaJa eoCrfV"
@@ -33,7 +33,7 @@ exports[`App [Snapshot] Renders correctly 1`] = `
       </button>
     </header>
     <p
-      className="sc-ifAKCX cRvngq"
+      className="sc-ifAKCX bsUOqa"
     >
       User is unlogged.
     </p>

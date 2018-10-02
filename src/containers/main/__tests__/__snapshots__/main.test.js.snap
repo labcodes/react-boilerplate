@@ -28,7 +28,7 @@ exports[`Main [Snapshot] Renders correctly 1`] = `
     }
   >
     <div
-      className="sc-ifAKCX inzSPu"
+      className="sc-ifAKCX fVKAHz"
     >
       <header
         className="sc-bwzfXH hKXFQW"
@@ -50,7 +50,7 @@ exports[`Main [Snapshot] Renders correctly 1`] = `
         </button>
       </header>
       <p
-        className="sc-EHOje buAfjw"
+        className="sc-EHOje ktWpgG"
       >
         User is unlogged.
       </p>
