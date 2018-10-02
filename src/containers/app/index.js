@@ -1,6 +1,7 @@
 import React, { StrictMode } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import { compose, withHandlers, withState, lifecycle } from 'recompose';
 
 import { userLogged } from 'actions/system';
 
@@ -11,69 +12,59 @@ import TransitionComponent from 'components/transition';
 import logoUrl from 'assets/images/logo.svg';
 
 const Wrapper = styled.div`
-    text-align: center;
+  text-align: center;
 `;
 
 const Paragraph = styled.p`
-    font-size: large;
+  font-size: large;
 `;
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
+const AppMarkup = ({ transitionIn, loggedUser, logged }) => {
+  return (
+    <StrictMode>
+      <TransitionComponent transitionIn={transitionIn}>
+        <Wrapper>
+          <ErrorBoundary>
+            <HeaderComponent
+              logo={logoUrl}
+              handleButtonClick={loggedUser}
+            />
+          </ErrorBoundary>
 
-        this.state = {
-            transitionIn: false
-        };
-
-        this.loggedUser = this.loggedUser.bind(this);
-    }
-
-    componentDidMount() {
-        this.setState({ transitionIn: true });
-    }
-
-    loggedUser() {
-        const { userLogged, logged } = this.props;
-        userLogged(!logged);
-    }
-
-    render() {
-        const { logged } = this.props;
-        const { transitionIn } = this.state;
-
-        return (
-            <StrictMode>
-                <TransitionComponent transitionIn={transitionIn}>
-                    <Wrapper>
-                        <ErrorBoundary>
-                            <HeaderComponent
-                                logo={logoUrl}
-                                handleButtonClick={this.loggedUser}
-                            />
-                        </ErrorBoundary>
-
-                        <Paragraph>
-                            { logged ? 'User is logged' : 'User is unlogged.' }
-                        </Paragraph>
-                    </Wrapper>
-                </TransitionComponent>
-            </StrictMode>
-        );
-    }
+          <Paragraph>
+            {logged ? 'User is logged' : 'User is unlogged.'}
+          </Paragraph>
+        </Wrapper>
+      </TransitionComponent>
+    </StrictMode>
+  );
 };
 
-const mapStateToProps = (state) => {
-    return {
-        logged: state.system.userIsLogged,
-    }
-};
+const mapStateToProps = ({ system }) => ({
+  logged: system.userIsLogged,
+});
 
 const mapDispatchToProps = {
-    userLogged
+  userLogged
 };
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(App);
+const enhance = compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  withState('transitionIn', 'updateTransition', false),
+  withState('logged', 'updateLogged', false),
+  withHandlers({
+    loggedUser: ({ userLogged, updateLogged, logged }) => () => {
+      userLogged(!logged);
+      updateLogged(!logged);
+    }
+  }),
+  lifecycle({
+    componentWillMount() {
+      const { updateTransition } = this.props;
+      updateTransition(true);
+    }
+  }),
+);
+
+const AppContainer = enhance(AppMarkup);
+export default AppContainer;
